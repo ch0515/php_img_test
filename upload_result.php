@@ -24,4 +24,8 @@ if(move_uploaded_file($f_tmpname, $upload_file1)){
 }else{
     echo"업로드 실패";
 }
+
+$sql="insert into img(img_name, img_type, img_size, img_path) values('f_name','f_type',$f_size,'$upload_file1')";
+echo "추가되었습니다";
+mysqli_query($conn,$sql);
 ?>
